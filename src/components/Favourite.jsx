@@ -73,19 +73,6 @@ const Favourite = () => {
     }
   };
 
-  // const handleDeleteConfirm = () => {
-  //   const updatedFavorites = [...favorites];
-  //   updatedFavorites.splice(deleteIndex, 1);
-  //   setFavorites(updatedFavorites);
-  //   localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-  //   setShowDeleteConfirmation(false);
-  // };
-
-  // const handleDeleteCancel = () => {
-  //   setShowDeleteConfirmation(false);
-  //   setDeleteIndex(null);
-  // };
-
   const handleSubmit = () => {
     navigate("/");
   };
