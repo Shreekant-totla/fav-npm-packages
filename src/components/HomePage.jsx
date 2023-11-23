@@ -58,7 +58,7 @@ const Homepage = () => {
 
   return (
     <div className="w-4/5 m-auto">
-      <Label text={"Search For NPM Packages"} />
+      <strong><Label text={"Search For NPM Packages"} /></strong>
       <input
         type="text"
         name=""
@@ -68,7 +68,7 @@ const Homepage = () => {
         onChange={(e) => setQuery(e.target.value)}
       />
       <br />
-      <Label text={"Results"} />
+      <strong><Label text={"Results"} /></strong>
       <div className="h-52 overflow-y-auto">
         {throttle?.map((pkg, i) => (
           <label key={i} className="block mb-2.5">
@@ -86,7 +86,7 @@ const Homepage = () => {
       </div>
       <br />
       <br />
-      <Label text={"why is this your Fav?"} />
+      <strong><Label text={"why is this your Fav?"} /></strong>
       <textarea
         rows={4}
         cols={50}
@@ -96,13 +96,15 @@ const Homepage = () => {
         onChange={(e) => setFavReason(e.target.value)}
       />
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+      <div className="flex justify-end mt-5">
       <Button
         classname={
-          "w-1/7 bg-blue-600 hover:bg-blue-500 px-3 py-1 border-0 rounded text-white m-5"
+          "w-1/7 bg-violet-600 hover:bg-blue-300 px-3 py-1 border-0 rounded text-white"
         }
         text={"Submit"}
         handleSubmit={handleSubmit}
       />
+      </div>
 
       {/* Confirmation Modal */}
       {showConfirmationModal && (

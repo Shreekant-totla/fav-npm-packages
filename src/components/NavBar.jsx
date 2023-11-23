@@ -10,7 +10,7 @@ function NavBar() {
   };
 
   return (
-    <div className="flex items-center justify-evenly">
+    <div className="flex items-center justify-evenly bg-slate-200 w-4/5 mx-auto">
       <Link
         to={"/"}
         className={`text-2xl ${

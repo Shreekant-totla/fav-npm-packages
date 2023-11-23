@@ -79,25 +79,25 @@ const Favourite = () => {
 
   return (
     <div>
-      <div className="flex justify-between m-16 py-1 align-middle">
+      <div className="flex justify-between m-16 py-1 align-middle w-4/5 mx-auto">
         <h1>Welcome to Favourite NPM Packages</h1>
         <Button
           classname={
-            "w-1/7 bg-blue-600 hover:bg-blue-500 px-3 py-1 border-0 rounded text-white m-5"
+            "w-1/7 bg-blue-600 hover:bg-blue-500 px-3 py-1 border-0 rounded text-white"
           }
           text={"Add Fav"}
           handleSubmit={handleSubmit}
         />
       </div>
-      <ul className="border border-black w-80% m-16 py-1">
+      <ul className="border border-black w-80% m-16 py-1 w-4/5 mx-auto">
         <div className="flex justify-around">
           <li><strong>Package name</strong></li>
           <li><strong>Actions</strong></li>
         </div>
         {favorites.map((fav, index) => (
           <li key={index} className="flex items-center justify-between border-b border-gray-300 p-4">
-            <span className="w-3/4">{fav.result}</span>
-            <div className="w-1/4 flex items-center justify-end space-x-4">
+            <span className="max-w-sm mx-64">{fav.result}</span>
+            <div className="flex items-center justify-end space-x-4 border mx-56 gap-2">
               <FontAwesomeIcon
                 icon={fav.isVisible ? faEyeSlash : faEye}
                 onClick={() => handleToggleVisibility(index)}
@@ -118,8 +118,8 @@ const Favourite = () => {
               />
             </div>
             {fav.isVisible && (
-              <div className="absolute left-1/4 mt-2 p-2 bg-white border border-gray-300 rounded-md">
-                <strong>Reason:</strong> {fav.reason}
+              <div className="absolute left-1/4 mt-2 p-2 mx-80 bg-white border border-gray-300 rounded-md">
+                <strong>Fav Reason:</strong> {fav.reason}
               </div>
             )}
             {fav.isEditing && (
